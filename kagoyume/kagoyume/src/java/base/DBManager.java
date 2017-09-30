@@ -17,9 +17,9 @@ public class DBManager {
             System.out.println("DBConnected!!");
             return con;
         }catch(ClassNotFoundException e){
-            throw new IllegalMonitorStateException();
+            throw new IllegalMonitorStateException(e.getMessage());
         } catch (SQLException e) {
-            throw new IllegalMonitorStateException();
+            throw new IllegalMonitorStateException("DBと接続できませんでした");
         }
     }
 }
